@@ -1,0 +1,40 @@
+# Template for the real, private CV data.
+#
+# Copy this file to `private.toml` in this same folder (already gitignored —
+# see .gitignore) and fill in real values. `private.toml` must never be
+# committed.
+#
+# Used only when compiling locally with:
+#   typst compile cv.typ output/cv-it-full.pdf --font-path assets/fonts \
+#       --input profile=it --input variant=private
+#
+# [info] is merged over profile_it/metadata.toml's [personal.info]: email and
+# phone are added, and location overrides the public city-only value with the
+# real street address. Omit any key you do not want in the full PDF.
+#
+# `photo` is an optional path, relative to the repository root, to a portrait
+# under the gitignored assets/private/ folder. Omit it to build without one.
+#
+# [[references]] entries are looked up by `key` from the cv-entry calls in
+# professional.typ and are rendered only when variant = "private". An entry
+# whose key no cv-entry asks for is simply never rendered, and a ref-line
+# whose key has no entry renders nothing — neither is an error.
+
+[info]
+    email = "you@example.com"
+    phone = "+00 000 0000000"
+    location = "Street 1, 00000 City, Country"
+
+photo = "assets/private/photo.jpg"
+
+[[references]]
+    key = "ecb"
+    name = "Full Name"
+    title = "Job title, Organisation"
+    email = "referee@example.com"
+
+[[references]]
+    key = "protiviti"
+    name = "Full Name"
+    title = "Job title, Organisation"
+    email = "referee@example.com"

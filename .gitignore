@@ -1,0 +1,21 @@
+# Private CV data — real contact info, referees, photo. Never committed.
+# Created locally from private.example.toml; see README.md.
+profile_*/private.toml
+assets/private/
+
+# Build output. The published PDFs are produced by CI, never committed.
+output/
+site/
+*.pdf
+!assets/**/*.pdf
+
+# Design spec and implementation plan: kept local, not published.
+docs/
+
+# Local tooling
+node_modules/
+__pycache__/
+
+# Claude Code local files
+.claude/
+CLAUDE.md

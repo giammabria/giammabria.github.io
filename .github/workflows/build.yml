@@ -1,0 +1,59 @@
+name: Build and deploy CV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "cv.typ"
+      - "profile_en/**"
+      - "profile_it/**"
+      - "assets/**"
+      - "index.html"
+      - ".github/workflows/build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: typst-community/setup-typst@v5
+        with:
+          typst-version: "0.15.1"
+
+      # No `--input variant` is passed here, on purpose. profile_*/private.toml
+      # is gitignored and so is not present in this checkout at all: the build
+      # cannot reach real contact details, referee names, or the photo even if
+      # the flag were added by mistake. See cv.typ for the switch itself.
+      - name: Compile public CV PDFs (EN + IT)
+        run: |
+          mkdir -p site
+          typst compile cv.typ site/cv-en.pdf --font-path assets/fonts --input profile=en
+          typst compile cv.typ site/cv-it.pdf --font-path assets/fonts --input profile=it
+          cp index.html site/index.html
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

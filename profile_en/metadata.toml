@@ -1,0 +1,53 @@
+# Profile: English. PUBLIC-SAFE DATA ONLY.
+#
+# No email, phone, street address, or referee name belongs in this file —
+# it is committed to a public repository. Those values live in
+# profile_en/private.toml (gitignored) and are merged in only for local
+# builds run with `--input variant=private`. See private.example.toml.
+
+header_quote = "Data scientist and supervisory analyst bridging central-bank supervision, machine learning, and financial risk; building robust, scalable data infrastructure and production ML pipelines (Python, SQL) from large, fragmented datasets."
+
+cv_footer = "Curriculum Vitae"
+
+# Rendered as a small centred note at the end of the document, not in the
+# page footer: brilliant-cv's footer is a narrow three-column strip and a
+# sentence this long overlaps the name printed on its left.
+gdpr_note = "I authorise the use and processing of my personal data in accordance with the EU GDPR for recruitment and selection purposes."
+
+[layout]
+    awesome_color = "#1F3B57"
+    before_section_skip = "0pt"
+    before_entry_skip = "-5pt"
+    before_entry_description_skip = "-6pt"
+    paper_size = "a4"
+    date_width = "5.8cm"
+    font_size = "8.8pt"
+
+    [layout.fonts]
+        regular_fonts = ["Source Sans 3"]
+        header_font = "Roboto"
+
+    [layout.header]
+        header_align = "left"
+        display_profile_photo = false
+        info_font_size = "8.5pt"
+
+    [layout.entry]
+        display_entry_society_first = true
+        display_logo = false
+
+    [layout.section]
+        title_highlight = "full"
+
+    [layout.footer]
+        display_page_counter = true
+        display_footer = true
+
+[personal]
+    first_name = "Gianmaria"
+    last_name = "Brianese"
+
+    [personal.info]
+        location = "Frankfurt am Main, Germany"
+        github = "giammabria"
+        linkedin = "gianmaria-brianese"
