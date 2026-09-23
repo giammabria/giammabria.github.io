@@ -23,7 +23,7 @@
 #cv-skill(
   type-width: 27%,
   type: [Data Engineering \& Cloud],
-  info: [AWS (S3) #h-bar() Apache Spark #h-bar() Hadoop #h-bar() Airflow #h-bar() Docker #h-bar() Git #h-bar() WSL (Ubuntu)],
+  info: [AWS (S3) #h-bar() Apache Spark #h-bar() Hadoop #h-bar() Airflow #h-bar() Docker #h-bar() Git #h-bar() GitLab],
 )
 
 #cv-skill(

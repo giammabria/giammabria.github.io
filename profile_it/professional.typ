@@ -43,11 +43,12 @@
   date: [07/2021 -- in corso],
   location: [Francoforte sul Meno, Germania],
   description: bullets(
-    [Ideazione e realizzazione, con le autorità nazionali di 21 giurisdizioni, del *Registro outsourcing SSM* (110 SI): dizionari dei dati e standard di reporting in linea con DORA. I risultati sono confluiti nelle valutazioni SREP sul rischio operativo e nel monitoraggio del rischio di concentrazione sui fornitori terzi critici],
-    [Coordinamento di iniziative BCE/EBA/NCA per la convergenza di vigilanza: *revisione tematica dei framework di governance* di circa 300 LSI in 21 giurisdizioni SSM, condotta insieme a Banca d'Italia e conclusa con raccomandazioni approvate dall'SMN; analisi dell'impatto e della trasposizione dell'*art. 21c CRD VI* negli Stati membri; stesura della *policy interna sui rischi delle online deposit platform* e sulla misurazione dell'esposizione degli enti; mappatura e quantificazione delle *cripto-attività e delle stablecoin* su tutte le LSI (MiCAR); referente BCE per Bulgaria e Portogallo],
-    [Analisi orizzontali sul settore bancario europeo -- outsourcing, rischio ICT e cloud, rischio di concentrazione, esposizioni creditizie per singolo debitore, redditività e quote di mercato delle fintech -- basate su *strumenti di graph analytics e NLP* per entity resolution, identificazione dei fornitori di servizi e mappatura delle dipendenze da terze parti],
-    [Progettazione e sviluppo di *pipeline ETL scalabili su AWS/Cloudera* (S3, Spark, Airflow): oltre 100 tabelle relative a tutte le 3.000 LSI dell'SSM, in crescita trimestrale, confluite in un data lab divisionale basato sugli standard SDMX, con sviluppo versionato su Git. L'infrastruttura ha ridotto i cicli di reportistica fino all'80%],
-    [Sviluppo, testing e manutenzione di *tre pacchetti Python interni* per analisi statistica, segnalazioni di vigilanza ed estrazione dei dati, che hanno reso i flussi di lavoro più solidi, riutilizzabili ed efficienti],
+    [Progettato e realizzato, con le autorità nazionali di 21 giurisdizioni, il *Registro outsourcing SSM* (110 SI), definendo dizionari dei dati e standard di reporting in linea con DORA; i risultati sono confluiti nelle valutazioni SREP sul rischio operativo e nel monitoraggio del rischio di concentrazione sui fornitori terzi critici],
+    [Coordinate iniziative BCE/EBA/NCA per la convergenza di vigilanza: condotta insieme a Banca d'Italia la *revisione tematica dei framework di governance* di circa 300 LSI in 21 giurisdizioni SSM, conclusa con raccomandazioni approvate dall'SMN; analizzati impatto e trasposizione dell'*art. 21c CRD VI* negli Stati membri; redatta la *policy interna sui rischi delle online deposit platform* e sulla misurazione dell'esposizione degli enti; mappate e quantificate le *cripto-attività e le stablecoin* su tutte le LSI (MiCAR); referente BCE per Bulgaria e Portogallo],
+    [Condotte analisi orizzontali sul settore bancario europeo -- outsourcing, rischio ICT e cloud, rischio di concentrazione, esposizioni creditizie per singolo debitore, redditività e quote di mercato delle fintech -- basate su *strumenti di graph analytics e NLP* per entity resolution, identificazione dei fornitori di servizi e mappatura delle dipendenze da terze parti],
+    [Progettate e sviluppate *pipeline ETL scalabili su AWS/Cloudera* (S3, Spark, Airflow): oltre 100 tabelle relative a tutte le 3.000 LSI dell'SSM, in crescita trimestrale, confluite in un data lab divisionale basato sugli standard SDMX, con sviluppo versionato su Git; l'infrastruttura ha ridotto i cicli di reportistica fino all'80%],
+    [Sviluppati, testati e mantenuti *tre pacchetti Python interni* per analisi statistica, segnalazioni di vigilanza ed estrazione dei dati, rendendo i flussi di lavoro più solidi, riutilizzabili ed efficienti],
+    [Creati e mantenuti i *repository GitLab* del team di 5 persone della divisione per tutti i prodotti dati, ciascuno con documentazione tecnica strutturata; curato il wiki della divisione su Confluence/Jira],
     ref-line("ecb", "ecb2"),
   ),
 )
@@ -58,9 +59,9 @@
   date: [10/2020 -- 06/2021],
   location: [Milano, Italia],
   description: bullets(
-    [Definizione di *metodologie di valutazione del rischio e framework di reporting* per tre portafogli di private equity, con strumenti automatizzati per lo stress test dei piani industriali e la valutazione dei rischi operativi, strategici e finanziari di ogni società in portafoglio],
-    [Sviluppo di *dashboard e reportistica di conformità* per due intermediari, per monitorarne l'allineamento alle linee guida BCE ed EBA],
-    [Stesura, revisione e validazione di *policy e manuali sul rischio operativo e di credito*, a supporto delle strategie di mitigazione],
+    [Definite *metodologie di valutazione del rischio e framework di reporting* per tre portafogli di private equity, con strumenti automatizzati per lo stress test dei piani industriali e la valutazione dei rischi operativi, strategici e finanziari di ogni società in portafoglio],
+    [Sviluppate *dashboard e reportistica di conformità* per due intermediari, per monitorarne l'allineamento alle linee guida BCE ed EBA],
+    [Redatti, revisionati e validati *policy e manuali sul rischio operativo e di credito*, a supporto delle strategie di mitigazione],
     ref-line("protiviti"),
   ),
 )

@@ -20,12 +20,15 @@
 # whose key no cv-entry asks for is simply never rendered, and a ref-line
 # whose key has no entry renders nothing — neither is an error.
 
+# `photo` must stay above [info]: a key written after a table header belongs
+# to that table, so below [info] it would become info.photo and break the
+# header.
+photo = "assets/private/photo.jpg"
+
 [info]
     email = "you@example.com"
     phone = "+00 000 0000000"
     location = "Street 1, 00000 City, Country"
-
-photo = "assets/private/photo.jpg"
 
 [[references]]
     key = "ecb"

@@ -1,0 +1,11 @@
+# Track: Data Engineer (English only, built locally, never published).
+# PUBLIC-SAFE DATA ONLY, like profile_en/metadata.toml.
+#
+# Merged over metadata.toml by cv.typ when compiled with --input track=de.
+# `modules` are included in order from this directory. A [layout] table may
+# override flat layout keys (spacing, date_width); nested tables such as
+# [layout.header] are not merged.
+
+header_quote = "Data engineer building production pipelines on AWS/Cloudera (Apache Spark, Apache Airflow, S3) for European banking supervision. Owner of a 100+ table data lab that cut reporting cycles by up to 80%."
+
+modules = ["experience", "projects", "education", "skills", "certificates"]

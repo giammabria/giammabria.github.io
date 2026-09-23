@@ -17,9 +17,14 @@ them at <https://giammabria.github.io/>.
 - `assets/fonts/` — bundled Source Sans 3, Roboto, and Font Awesome 7 Free,
   all OFL-licensed, so `--font-path assets/fonts` is self-contained and CI
   needs no font install step.
+- `assets/fonts-italic/` — Source Sans 3 Italic, for the tech CVs only; see
+  "Tech CVs (local only)".
 - `index.html` — landing page linking the two published PDFs.
 - `tools/check_no_leak.py` — verifies no private value reached the repository
   or a public PDF.
+- `tools/check_pdf.py` — checks page count, text, and links of a built PDF.
+- `profile_en/tracks/ds/`, `profile_en/tracks/de/` — the tech CVs; see
+  "Tech CVs (local only)".
 
 ## Public vs. full PDF
 
@@ -45,6 +50,39 @@ typst compile cv.typ output/cv-en-full.pdf --font-path assets/fonts \
     --input profile=en --input variant=private
 typst compile cv.typ output/cv-it-full.pdf --font-path assets/fonts \
     --input profile=it --input variant=private
+```
+
+## Tech CVs (local only)
+
+Two English-only variants aimed at technical roles live under
+`profile_en/tracks/`: `ds` (Data Scientist) and `de` (Data Engineer). They
+reuse `metadata.toml` and `private.toml`, replace the headline, and list
+their own sections in `track.toml`. They never show referees. CI does not
+build them and the site does not link them.
+
+```sh
+typst compile cv.typ output/cv-ds.pdf --font-path assets/fonts \
+    --font-path assets/fonts-italic --input track=ds
+typst compile cv.typ output/cv-de.pdf --font-path assets/fonts \
+    --font-path assets/fonts-italic --input track=de
+typst compile cv.typ output/cv-ds-full.pdf --font-path assets/fonts \
+    --font-path assets/fonts-italic --input track=ds --input variant=private
+typst compile cv.typ output/cv-de-full.pdf --font-path assets/fonts \
+    --font-path assets/fonts-italic --input track=de --input variant=private
+```
+
+`assets/fonts-italic/` holds Source Sans 3 Italic (OFL), used only for the
+honours in the tech CVs' Education section. It is kept out of
+`assets/fonts/` on purpose: brilliant-cv styles the header quote, dates and
+locations in italic, and the published CV has always rendered them upright
+because no italic face was available. Without the extra `--font-path` the
+tech CVs still build, with the honours upright.
+
+`tools/check_pdf.py` checks a built PDF's page count, expected and
+forbidden text, and that every link answers HTTP 200:
+
+```sh
+python3 tools/check_pdf.py output/cv-ds.pdf --max-pages 2 --check-links
 ```
 
 ## Checking for leaks

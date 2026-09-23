@@ -1,11 +1,14 @@
 #import "@preview/brilliant-cv:4.1.0": cv
 
-// Two independent switches, both set with --input at compile time:
+// Three independent switches, all set with --input at compile time:
 //
 //   profile: "en" (default) | "it"          -- which language to render
 //   variant: "public" (default) | "private" -- whether to overlay the real
 //     contact details, photo, and referee names from the gitignored
 //     private.toml
+//   track: "supervision" (default) | "ds" | "de" -- which CV to render. ds
+//     and de are English-only tech CVs built locally and never published;
+//     each reads profile_en/tracks/<track>/track.toml.
 //
 // Both default to the safe value, so a bare `typst compile cv.typ` produces
 // the public English CV. CI never passes `variant`, and private.toml is
@@ -14,6 +17,19 @@
 #let profile = sys.inputs.at("profile", default: "en")
 #let variant = sys.inputs.at("variant", default: "public")
 #let profile-dir = "profile_" + profile + "/"
+#let track = sys.inputs.at("track", default: "supervision")
+#if track not in ("supervision", "ds", "de") {
+  panic("unknown track '" + track + "': expected supervision, ds or de")
+}
+#if track != "supervision" and profile != "en" {
+  panic("track '" + track + "' exists only in English: drop --input profile=" + profile)
+}
+#let track-dir = profile-dir + "tracks/" + track + "/"
+#let track-data = if track != "supervision" {
+  toml(track-dir + "track.toml")
+} else {
+  (:)
+}
 
 #let base-metadata = toml(profile-dir + "metadata.toml")
 
@@ -41,13 +57,40 @@
 // so flip it here rather than duplicating the whole layout table in
 // private.toml.
 #let metadata = if profile-photo != none {
-  metadata
-    + (
-      layout: metadata.layout
-        + (header: metadata.layout.header + (display_profile_photo: true)),
-    )
+  // `+` must end the line, not start the next: in a code block a newline
+  // ends the expression, and a leading `+` is then read as unary plus.
+  metadata + (
+    layout: metadata.layout + (
+      header: metadata.layout.header + (display_profile_photo: true),
+    ),
+  )
 } else {
   metadata
+}
+
+// Track overlay. A tech track replaces the headline and may tune flat
+// layout keys; everything else, including the private overlay above, is
+// shared with the supervision CV.
+#let metadata = if track != "supervision" {
+  metadata + (
+    header_quote: track-data.header_quote,
+    layout: metadata.layout + track-data.at("layout", default: (:)),
+  )
+} else {
+  metadata
+}
+
+// Tech tracks only: brilliant-cv sets the header quote in medium-weight
+// italic and entry locations and dates in oblique. Those stay upright, as in
+// the supervision CV, whose build has no italic face at all. The tech builds
+// add --font-path assets/fonts-italic for deliberate emphasis (tech.typ
+// `honour`), a regular-weight italic that neither rule matches.
+#show: body => if track == "supervision" {
+  body
+} else {
+  show text.where(style: "oblique"): set text(style: "normal")
+  show text.where(style: "italic", weight: "medium"): set text(style: "normal")
+  body
 }
 
 // Hyperlinks read as clickable without shouting, tinted with the profile's
@@ -62,7 +105,13 @@
   }
 }
 
-#import-modules(("professional", "education", "certificates", "skills"))
+#if track == "supervision" {
+  import-modules(("professional", "education", "certificates", "skills"))
+} else {
+  for module in track-data.modules {
+    include track-dir + module + ".typ"
+  }
+}
 
 // GDPR processing consent. Kept out of `cv_footer` on purpose -- see the
 // comment beside `gdpr_note` in metadata.toml.

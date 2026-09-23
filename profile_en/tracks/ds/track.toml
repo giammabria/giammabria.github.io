@@ -1,0 +1,11 @@
+# Track: Data Scientist (English only, built locally, never published).
+# PUBLIC-SAFE DATA ONLY, like profile_en/metadata.toml.
+#
+# Merged over metadata.toml by cv.typ when compiled with --input track=ds.
+# `modules` are included in order from this directory. A [layout] table may
+# override flat layout keys (spacing, date_width); nested tables such as
+# [layout.header] are not merged.
+
+header_quote = "Data scientist bridging central-bank supervision, machine learning, and financial risk; building robust, scalable data infrastructure and production ML pipelines (Python, SQL) from large, fragmented datasets."
+
+modules = ["experience", "projects", "education", "skills", "certificates"]
