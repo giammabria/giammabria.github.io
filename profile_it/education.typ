@@ -11,7 +11,7 @@
     [Laurea conseguita con Grande Distinction],
     [Tesi: Segmentazione semantica multiclasse di nuvole di punti LiDAR aeree su larga scala con reti neurali 3D e clustering su grafi],
     [Progetto: #link("https://github.com/giammabria/Pose-estimation-from-emg-signal")[Stima della posa della mano da segnali EMG] -- pipeline modulare con CNN, domain-adversarial learning (DANN) e modelli ensemble; 2° classificato su 41 progetti del corso di laurea magistrale],
-    [Altri progetti: #link("https://github.com/giammabria/Spotify-Million-Playlist-Dataset-Challenge")[Spotify Million Playlist Dataset Challenge] #h-bar() replica di #link("https://arxiv.org/abs/1604.07143")[Neural Random Forest]],
+    [Altri progetti: #link("https://github.com/giammabria/Spotify-Million-Playlist-Dataset-Challenge")[Spotify Million Playlist Dataset Challenge]],
   ),
 )
 

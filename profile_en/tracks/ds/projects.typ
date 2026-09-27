@@ -14,7 +14,7 @@
   date: [2026],
   location: "",
   description: list(
-    [Turned airborne LiDAR surveys of *a major Italian energy utility*'s medium-voltage lines into vegetation-interference criticalities per span and tree-cutting sections, with year-on-year HTML comparisons against the previous survey],
+    [Turned 150M+ LiDAR interference points over the medium-voltage lines of *a major Italian energy utility* into vegetation-interference criticalities per span and tree-cutting sections, with year-on-year HTML comparisons against the previous survey],
     [Staged pipeline on #tech[PyQGIS] and #tech[GDAL], with dry-run and verified backups before destructive steps\; 60 test modules],
   ),
 )
@@ -25,18 +25,18 @@
   date: [2026],
   location: "",
   description: list(
-    [*AI agent* built on #tech[Claude Code] for an agricultural drone operator: four specialised subagents (agronomy, regulation, data analysis, document library) and skills grounded in a curated knowledge base],
+    [*AI agent* built on #tech[Claude Code] for an agricultural drone operator: four specialised subagents (agronomy, regulation, data analysis, document library) and skills grounded in a curated library of 51 documents and 13 technical sheets],
     [Vineyard pipeline from multispectral and thermal drone rasters to vegetation indices, HTML mission reports and a 3D viewer (#tech[rasterio], #tech[NumPy])\; 20 test modules including golden-file tests],
   ),
 )
 
 #cv-entry(
-  title: [MSc thesis -- ULB],
+  title: [MSc thesis -- ULB, internship at LTS],
   society: link("https://github.com/giammabria/airborne-lidar-classification")[Aerial LiDAR point-cloud segmentation],
   date: [2025],
   location: "",
   description: list(
-    [Semantic segmentation of large-scale aerial LiDAR point clouds with *RandLA-Net* (#tech[PyTorch Geometric]), benchmarked against classical ground filters (CSF, PMF, SMRF); preprocessing with #tech[PDAL]],
+    [Semantic segmentation of aerial LiDAR point clouds (22 tiles of \~1 km², up to 32.7M points each) with *RandLA-Net and Superpoint Transformer* (#tech[PyTorch Geometric]), benchmarked against classical ground filters (CSF, PMF, SMRF); preprocessing with #tech[PDAL]],
     [*MLOps pipelines* for multi-GPU training and inference with #tech[PyTorch Lightning], configured through #tech[Hydra]\; pytest suite and spatial-statistics evaluation metrics],
   ),
 )
@@ -58,15 +58,5 @@
   location: "",
   description: list(
     [Track and playlist similarity from #tech[sentence-transformers] embeddings and features engineered with #tech[Polars], with #tech[scikit-learn] K-means clustering for *playlist continuation* over 1M playlists; results explored through a #tech[Streamlit] app],
-  ),
-)
-
-#cv-entry(
-  title: [Paper replication -- ULB],
-  society: link("https://arxiv.org/abs/1604.07143")[Neural Random Forests],
-  date: [2025],
-  location: "",
-  description: list(
-    [Re-implemented the neural random forest architecture in #tech[TensorFlow] and compared its interpretability with tree ensembles],
   ),
 )

@@ -117,6 +117,8 @@
 // comment beside `gdpr_note` in metadata.toml.
 #let gdpr-note = metadata.at("gdpr_note", default: "")
 #if gdpr-note != "" {
-  v(0.45em)
+  // 0.2em, not more: the full CV (contacts + referee lines) fits one page
+  // only up to about 0.25em.
+  v(0.2em)
   align(center, text(size: 7.5pt, fill: luma(110), gdpr-note))
 }

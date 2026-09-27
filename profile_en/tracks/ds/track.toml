@@ -6,6 +6,6 @@
 # override flat layout keys (spacing, date_width); nested tables such as
 # [layout.header] are not merged.
 
-header_quote = "Data scientist bridging central-bank supervision, machine learning, and financial risk; building robust, scalable data infrastructure and production ML pipelines (Python, SQL) from large, fragmented datasets."
+header_quote = "Data scientist bridging central-bank supervision, machine learning and financial risk — from framing the business question to production ML pipelines (Python, SQL), with insights that informed supervisory assessments."
 
 modules = ["experience", "projects", "education", "skills", "certificates"]

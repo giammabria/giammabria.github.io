@@ -5,7 +5,7 @@
 # profile_it/private.toml (gitignorato) e vengono uniti solo per le build
 # locali lanciate con `--input variant=private`. Vedi private.example.toml.
 
-header_quote = "Data scientist a cavallo tra vigilanza di banca centrale, machine learning e rischio finanziario; costruisco infrastrutture dati solide e scalabili e pipeline di ML in produzione (Python, SQL) a partire da grandi dataset frammentati."
+header_quote = "Data scientist e analista di vigilanza tra vigilanza, ML e rischio finanziario: dalla domanda di business alle pipeline di ML in produzione (Python, SQL), con analisi che hanno orientato valutazioni di vigilanza e policy SSM."
 
 cv_footer = "Curriculum Vitae"
 

@@ -11,7 +11,7 @@
     [Graduated with Grande Distinction],
     [Thesis: Multiclass semantic segmentation of large-scale aerial LiDAR point clouds using 3D neural networks and graph clustering],
     [Project: #link("https://github.com/giammabria/Pose-estimation-from-emg-signal")[Hand Pose Estimation with EMG signal] -- modular pipeline using CNNs, domain-adversarial learning (DANN) and ensemble models; ranked 2nd/41 in the MSc project competition],
-    [Other projects: #link("https://github.com/giammabria/Spotify-Million-Playlist-Dataset-Challenge")[Spotify Million Playlist Dataset Challenge] #h-bar() replication of #link("https://arxiv.org/abs/1604.07143")[Neural Random Forest]],
+    [Other projects: #link("https://github.com/giammabria/Spotify-Million-Playlist-Dataset-Challenge")[Spotify Million Playlist Dataset Challenge]],
   ),
 )
 

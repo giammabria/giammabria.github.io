@@ -5,7 +5,7 @@
 # profile_en/private.toml (gitignored) and are merged in only for local
 # builds run with `--input variant=private`. See private.example.toml.
 
-header_quote = "Data scientist and supervisory analyst bridging central-bank supervision, machine learning, and financial risk; building robust, scalable data infrastructure and production ML pipelines (Python, SQL) from large, fragmented datasets."
+header_quote = "Data scientist and supervisory analyst bridging supervision, ML and financial risk — from framing the business question to production ML pipelines (Python, SQL), with insights that informed supervisory assessments and SSM policy."
 
 cv_footer = "Curriculum Vitae"
 

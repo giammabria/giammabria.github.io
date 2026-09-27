@@ -14,7 +14,7 @@
   date: [2026],
   location: "",
   description: list(
-    [Production pipeline turning airborne LiDAR surveys of *a major Italian energy utility*'s medium-voltage lines into per-span vegetation criticalities, tree-cutting sections and client deliverables: per-line #tech[GeoPackage] files with embedded styles, tables and HTML reports],
+    [Production pipeline turning 150M+ LiDAR interference points over the medium-voltage lines of *a major Italian energy utility* into per-span vegetation criticalities, tree-cutting sections and client deliverables: per-line #tech[GeoPackage] files, tables and HTML reports],
     [Staged CLI (ingest → reconcile → apply → analyse → export) on #tech[PyQGIS] and #tech[GDAL], with dry-run and verified backups before destructive steps\; 60 test modules],
   ),
 )
@@ -26,18 +26,28 @@
   location: "",
   description: list(
     [Vineyard pipeline from multispectral and thermal drone rasters to vegetation indices, HTML mission reports and a 3D viewer (#tech[rasterio], #tech[NumPy])\; 20 test modules including golden-file tests],
-    [*AI agent* on #tech[Claude Code] for an agricultural drone operator: four specialised subagents and skills grounded in a curated document knowledge base],
+    [*AI agent* on #tech[Claude Code] for an agricultural drone operator: four specialised subagents and skills grounded in a curated knowledge base of 51 documents and 13 technical sheets],
   ),
 )
 
 #cv-entry(
-  title: [MSc thesis -- ULB],
+  title: [MSc thesis -- ULB, internship at LTS],
   society: link("https://github.com/giammabria/airborne-lidar-classification")[Aerial LiDAR point-cloud pipeline],
   date: [2025],
   location: "",
   description: list(
-    [End-to-end point-cloud data path: #tech[PDAL] preprocessing and colourisation, LAS/LAZ merging, batch strip classification and #tech[HDF5] dataset packaging],
-    [*MLOps pipelines* for multi-GPU training and inference (#tech[PyTorch Lightning], #tech[Hydra])\; pytest and code-quality CI on #tech[GitHub Actions]],
+    [End-to-end point-cloud data path over 22 tiles of \~1 km², up to 32.7M points each: #tech[PDAL] preprocessing and colourisation, LAS/LAZ merging, batch strip classification and #tech[HDF5] dataset packaging],
+    [*MLOps pipelines* for multi-GPU training and inference of RandLA-Net and Superpoint Transformer (#tech[PyTorch Lightning], #tech[Hydra])\; pytest and code-quality CI on #tech[GitHub Actions]],
+  ),
+)
+
+#cv-entry(
+  title: [Team project -- ULB MSc project competition],
+  society: link("https://github.com/giammabria/pose-estimation-from-emg-signal")[Hand pose estimation from sEMG signals],
+  date: [2025],
+  location: "",
+  description: list(
+    [Regression of 51 hand joint angles from 8-electrode sEMG with time-domain and Riemannian covariance features, CNNs and *domain-adversarial learning (DANN)* in #tech[PyTorch], stacking/voting ensembles in #tech[scikit-learn]\; *ranked 2nd of 41*],
   ),
 )
 
