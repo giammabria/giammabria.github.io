@@ -1,0 +1,16 @@
+# Track: Application (English only, built locally, never published).
+# PUBLIC-SAFE DATA ONLY, like profile_en/metadata.toml.
+#
+# The working track for a CV tailored to one specific application: rewrite
+# the headline and the modules for the role at hand, build, send. Unlike ds
+# and de it has no fixed audience; git history keeps the earlier versions.
+# This repository is public, so name neither the company nor the role here.
+#
+# Merged over metadata.toml by cv.typ when compiled with
+# --input track=application. `modules` are included in order from this
+# directory. A [layout] table may override flat layout keys (spacing,
+# date_width); nested tables such as [layout.header] are not merged.
+
+header_quote = "Analytics and AI practitioner with a risk-consulting background: four years at the European Central Bank turning open-ended questions into data products used across 21 jurisdictions, plus an AI agent and data pipelines delivered for clients."
+
+modules = ["experience", "projects", "education", "skills", "certificates"]

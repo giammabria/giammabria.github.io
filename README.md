@@ -78,6 +78,18 @@ locations in italic, and the published CV has always rendered them upright
 because no italic face was available. Without the extra `--font-path` the
 tech CVs still build, with the honours upright.
 
+A third track, `application`, is the working copy for a CV tailored to one
+specific application: rewrite its headline and modules for the role, build,
+send. It follows the same rules as `ds` and `de`. The repository is public,
+so its files name neither the company nor the role.
+
+```sh
+typst compile cv.typ output/cv-application.pdf --font-path assets/fonts \
+    --font-path assets/fonts-italic --input track=application
+typst compile cv.typ output/cv-application-full.pdf --font-path assets/fonts \
+    --font-path assets/fonts-italic --input track=application --input variant=private
+```
+
 `tools/check_pdf.py` checks a built PDF's page count, expected and
 forbidden text, and that every link answers HTTP 200:
 

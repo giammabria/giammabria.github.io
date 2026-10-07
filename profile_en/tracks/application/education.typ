@@ -9,8 +9,7 @@
   date: [2024 -- 2025],
   location: [Brussels, Belgium],
   description: list(
-    [Graduated with #honour[Grande Distinction] #h-bar() Thesis on aerial LiDAR point-cloud segmentation (see Projects)],
-    [Coursework: Statistical Foundations of Machine Learning #h-bar() Pattern Recognition and Image Analysis #h-bar() Computational Statistics #h-bar() Multivariate and High-Dimensional Statistics #h-bar() Algorithms for Big Data],
+    [Graduated with #honour[Grande Distinction] #h-bar() Team project on #link("https://github.com/giammabria/pose-estimation-from-emg-signal")[hand pose estimation from sEMG signals] ranked 2nd of 41 in the MSc project competition],
   ),
 )
 
@@ -21,7 +20,6 @@
   location: [Venice, Italy / Aix-en-Provence, France],
   description: list(
     [Graduated #honour[Cum Laude] #h-bar() Major: Financial Risk Management],
-    [Thesis on ML models applied to commodity prices to predict currency crises in low-income countries],
   ),
 )
 

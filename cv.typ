@@ -6,9 +6,11 @@
 //   variant: "public" (default) | "private" -- whether to overlay the real
 //     contact details, photo, and referee names from the gitignored
 //     private.toml
-//   track: "supervision" (default) | "ds" | "de" -- which CV to render. ds
-//     and de are English-only tech CVs built locally and never published;
-//     each reads profile_en/tracks/<track>/track.toml.
+//   track: "supervision" (default) | "ds" | "de" | "application" -- which
+//     CV to render. ds and de are tech CVs, application is the working copy
+//     tailored to one specific application; all three are English-only,
+//     built locally and never published, and each reads
+//     profile_en/tracks/<track>/track.toml.
 //
 // Both default to the safe value, so a bare `typst compile cv.typ` produces
 // the public English CV. CI never passes `variant`, and private.toml is
@@ -18,8 +20,8 @@
 #let variant = sys.inputs.at("variant", default: "public")
 #let profile-dir = "profile_" + profile + "/"
 #let track = sys.inputs.at("track", default: "supervision")
-#if track not in ("supervision", "ds", "de") {
-  panic("unknown track '" + track + "': expected supervision, ds or de")
+#if track not in ("supervision", "ds", "de", "application") {
+  panic("unknown track '" + track + "': expected supervision, ds, de or application")
 }
 #if track != "supervision" and profile != "en" {
   panic("track '" + track + "' exists only in English: drop --input profile=" + profile)
