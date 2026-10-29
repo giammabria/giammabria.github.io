@@ -23,6 +23,12 @@ them at <https://giammabria.github.io/>.
 - `tools/check_no_leak.py` — verifies no private value reached the repository
   or a public PDF.
 - `tools/check_pdf.py` — checks page count, text, and links of a built PDF.
+- `tools/check_ats.py` — checks what an applicant tracking system extracts
+  from a built PDF: clean text, email, section order, date ranges, and
+  coverage of a posting's keywords.
+- `.claude/agents/` — Claude Code subagents: `fit-scorer` scores a job
+  posting against the CV before tailoring, `cv-reviewer` reviews a tailored
+  CV against the posting before it is sent.
 - `profile_en/tracks/ds/`, `profile_en/tracks/de/` — the tech CVs; see
   "Tech CVs (local only)".
 

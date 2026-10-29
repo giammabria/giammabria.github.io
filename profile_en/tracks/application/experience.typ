@@ -1,8 +1,9 @@
 #import "@preview/brilliant-cv:4.1.0": cv-entry, cv-section
 
-// Client-facing framing of the same roles as profile_en/professional.typ:
-// problem, stakeholders, solution, adoption, result. Supervisory acronyms are
-// spelled out for a reader outside central banking.
+// Framing of the same roles as profile_en/professional.typ for the current application:
+// data models and tests first, then the dashboards and analyses built on them,
+// and how their results reached decision makers. dbt is never claimed: the
+// author has never used it. Supervisory acronyms are spelled out.
 // No ref-line: track CVs never show referees, in either variant.
 
 #cv-section("Professional Experience")
@@ -13,12 +14,12 @@
   date: [07/2021 -- ongoing],
   location: [Frankfurt am Main, Germany],
   description: list(
-    [Led the design and implementation of the *SSM Outsourcing Register* with national supervisory authorities across 21 jurisdictions, covering 110 significant banks: translated DORA requirements into a reporting template, data dictionaries and reporting standards; findings informed supervisory assessments of operational risk and the monitoring of concentration on critical third-party providers],
-    [Co-led with Banca d'Italia a *cross-country thematic review of governance* across 278 smaller banks in 21 jurisdictions, benchmarking board independence, experience and diversity, with recommendations endorsed by the Supervisory Mechanism Network; coordinated convergence initiatives between the ECB, the European Banking Authority and national authorities, and acted as ECB liaison for Bulgaria and Portugal],
-    [Turned *open-ended policy questions into measurable analyses*: authored the internal policy on online deposit platform risks and on how to measure banks' reliance on them; mapped and quantified crypto-asset and stablecoin activity across all smaller banks under MiCAR],
-    [Built *analytical tools used in supervision*: entity resolution and third-party dependency mapping with graph analytics and NLP, and a monthly cross-bank tool on debtor-level credit data flagging debtors one bank still reports as performing after another creditor has recorded a default],
-    [Owned the *divisional data lab* on AWS/Cloudera (S3, Apache Spark, Apache Airflow): 100+ tables covering all 3,000 smaller banks under European supervision, three fragmented data sources integrated into one standardised database, outputs served to Tableau and Power BI; automation cut reporting cycles by up to 80%],
-    [Made the work *reusable by the team*: three internal Python packages maintained with the ECB Statistics Department, and the GitLab repositories, technical documentation and Confluence/Jira wiki of the division's 5-person team across all its data products],
+    [Owned the *divisional data lab* on AWS/Cloudera: *100+ tables* covering all 3,000 smaller banks and growing quarterly, built as SQL views and tables on Hadoop/Impala and in Spark, including one standardised database integrating three fragmented sources, with my own Tableau and Power BI dashboards on top; automation cut reporting cycles by up to 80%],
+    [Shipped changes through *GitLab CI/CD with automated code and data tests* and frequent merges: validated code was deployed to the cloud automatically to regenerate the tables, with versioned releases of three internal Python packages],
+    [Designed the *data models of four supervisory data collections* -- e.g. the outsourcing register for 110 significant banks, aligned with DORA: template, data dictionaries and standards -- and aligned them with national authorities in 21 countries and business and IT teams],
+    [Delivered *Generative AI prototypes on Amazon Bedrock* to automate supervisory workflows -- meeting minutes, a bank's main risks -- with an LLM-as-a-judge evaluation of output quality; worked in an Agile/Scrum team with Jira and Confluence],
+    [Built *analytics on credit and third-party data*: a monthly cross-bank tool on debtor-level credit data flagging defaults not yet recognised by other creditors, and NLP and graph-based entity resolution of third-party dependencies],
+    [Turned data into *recommendations for decision makers*: analyses of banking business models across 21 countries -- online deposit platforms (regression against interest rates), fintech profitability and market share, crypto-assets under MiCAR -- presented to senior management, national authorities and the Supervisory Board],
   ),
 )
 
@@ -28,8 +29,7 @@
   date: [10/2020 -- 06/2021],
   location: [Milan, Italy],
   description: list(
-    [Designed and implemented *risk evaluation methodologies and reporting frameworks* across three private equity portfolios, including automated tools for stress-testing business plans and assessing the operational, strategic and financial risks facing each portfolio company],
-    [Built *compliance dashboards and reporting* for two institutions, tracking their alignment with ECB and EBA guidelines],
-    [Drafted, reviewed and validated *operational and credit risk policies and manuals*, contributing to risk mitigation strategies],
+    [Built *compliance dashboards and reporting* for two financial institutions, tracking their alignment with ECB and EBA guidelines],
+    [Built *automated tools for stress-testing business plans* across three private equity portfolios],
   ),
 )

@@ -15,25 +15,31 @@
 
   #cv-skill(
     type-width: 27%,
-    type: [Data \& Programming],
-    info: [Python #h-bar() SQL #h-bar() R #h-bar() pandas #h-bar() Polars #h-bar() PostgreSQL, Oracle, SQL Server, MySQL],
+    type: [Data Modelling],
+    info: [SQL (Apache Impala, Hive, PostgreSQL, SQL Server, DuckDB) #h-bar() #box[Python (Polars, pandas)] #h-bar() #box[Apache Spark] #h-bar() Parquet #h-bar() data dictionaries #h-bar() automated data tests in CI],
   )
 
   #cv-skill(
     type-width: 27%,
-    type: [AI \& Analytics],
-    info: [AI agents (Claude Code subagents and skills) #h-bar() NLP (spaCy, sentence-transformers) #h-bar() ML (scikit-learn, PyTorch) #h-bar() graph analytics],
+    type: [Data Visualisation],
+    info: [Tableau #h-bar() Power BI #h-bar() Excel #h-bar() PowerPoint #h-bar() data storytelling],
   )
 
   #cv-skill(
     type-width: 27%,
-    type: [Data Platforms],
-    info: [AWS S3 #h-bar() Cloudera CDP #h-bar() Apache Spark #h-bar() Apache Airflow #h-bar() Docker],
+    type: [Engineering],
+    info: [Git, GitLab CI/CD #h-bar() Apache Airflow #h-bar() AWS S3 #h-bar() Cloudera CDP #h-bar() Docker],
   )
 
   #cv-skill(
     type-width: 27%,
-    type: [Delivery \& Reporting],
-    info: [Git #h-bar() GitLab #h-bar() Confluence/Jira #h-bar() Tableau #h-bar() Power BI #h-bar() Streamlit],
+    type: [AI],
+    info: [Generative AI (Amazon Bedrock, LLM evaluation) #h-bar() AI agents (Claude Code) #h-bar() ML and NLP],
+  )
+
+  #cv-skill(
+    type-width: 27%,
+    type: [Ways of Working],
+    info: [Agile/Scrum #h-bar() Jira, Confluence #h-bar() business and IT stakeholders],
   )
 ]

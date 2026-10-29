@@ -16,6 +16,9 @@ docs/
 node_modules/
 __pycache__/
 
-# Claude Code local files
-.claude/
+# Claude Code local files. Only the subagents are published: they hold
+# review and scoring rules, no personal data. Commands and fit-profile.md
+# (career goals, salary range) stay local.
+.claude/*
+!.claude/agents/
 CLAUDE.md

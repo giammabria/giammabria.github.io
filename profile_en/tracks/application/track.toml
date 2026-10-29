@@ -11,6 +11,19 @@
 # directory. A [layout] table may override flat layout keys (spacing,
 # date_width); nested tables such as [layout.header] are not merged.
 
-header_quote = "Analytics and AI practitioner with a risk-consulting background: four years at the European Central Bank turning open-ended questions into data products used across 21 jurisdictions, plus an AI agent and data pipelines delivered for clients."
+header_quote = "Analytics and data engineer with four years at the European Central Bank, owning a 100+ table data lab modelled in SQL and Spark and shipped through CI-tested pipelines, and turning its data into Tableau and Power BI reporting and analyses for senior management and national authorities in 21 countries."
 
-modules = ["experience", "projects", "education", "skills", "certificates"]
+modules = [
+  "experience",
+  # "projects",
+  "education",
+  "skills",
+  "certificates",
+]
+
+# More air than the shared defaults: this version has room to spare on one page.
+[layout]
+before_section_skip = "6pt"
+before_entry_skip = "0pt"
+before_entry_description_skip = "-3pt"
+font_size = "9pt"
